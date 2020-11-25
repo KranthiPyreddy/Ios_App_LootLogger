@@ -17,6 +17,7 @@
 		4038040F2553F67A009E355E /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4038040E2553F67A009E355E /* ItemsViewController.swift */; };
 		403804172553FB6B009E355E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403804162553FB6B009E355E /* Item.swift */; };
 		4038041C255408C6009E355E /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4038041B255408C6009E355E /* ItemStore.swift */; };
+		4086E19B256EA3E20023E619 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4086E19A256EA3E20023E619 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4038040E2553F67A009E355E /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		403804162553FB6B009E355E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4038041B255408C6009E355E /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		4086E19A256EA3E20023E619 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				403803E42553F005009E355E /* Assets.xcassets */,
 				403803E62553F005009E355E /* LaunchScreen.storyboard */,
 				403803E92553F005009E355E /* Info.plist */,
+				4086E19A256EA3E20023E619 /* ItemCell.swift */,
 			);
 			path = LootLogger;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				403804172553FB6B009E355E /* Item.swift in Sources */,
 				4038040F2553F67A009E355E /* ItemsViewController.swift in Sources */,
+				4086E19B256EA3E20023E619 /* ItemCell.swift in Sources */,
 				403803DC2553F000009E355E /* AppDelegate.swift in Sources */,
 				4038041C255408C6009E355E /* ItemStore.swift in Sources */,
 				403803DE2553F000009E355E /* SceneDelegate.swift in Sources */,

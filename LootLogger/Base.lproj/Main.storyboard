@@ -45,29 +45,48 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="rQ0-89-FDl" detailTextLabel="GWS-CS-igT" style="IBUITableViewCellStyleValue1" id="TzU-GA-7NT">
-                                <rect key="frame" x="0.0" y="88" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="TzU-GA-7NT" customClass="ItemCell" customModule="LootLogger" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TzU-GA-7NT" id="Gg1-6P-Pq2">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rQ0-89-FDl">
-                                            <rect key="frame" x="20" y="12" width="33" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="59" translatesAutoresizingMaskIntoConstraints="NO" id="OZz-K6-HNE">
+                                            <rect key="frame" x="35" y="11" width="41.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GWS-CS-igT">
-                                            <rect key="frame" x="350" y="12" width="44" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FI-WB-ght">
+                                            <rect key="frame" x="305" y="11" width="53" height="31"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCt-b7-7up">
+                                            <rect key="frame" x="35" y="39.5" width="31" height="22.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" systemColor="secondaryLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oCt-b7-7up" firstAttribute="top" secondItem="OZz-K6-HNE" secondAttribute="bottom" constant="8" symbolic="YES" id="6Gz-7k-I4e"/>
+                                        <constraint firstAttribute="trailing" secondItem="6FI-WB-ght" secondAttribute="trailing" constant="56" id="Ktl-za-PQH"/>
+                                        <constraint firstAttribute="bottom" secondItem="oCt-b7-7up" secondAttribute="bottom" constant="3" id="MIm-Kp-Atv"/>
+                                        <constraint firstItem="6FI-WB-ght" firstAttribute="centerY" secondItem="Gg1-6P-Pq2" secondAttribute="centerY" id="XYC-4v-z0Q"/>
+                                        <constraint firstItem="OZz-K6-HNE" firstAttribute="leading" secondItem="Gg1-6P-Pq2" secondAttribute="leadingMargin" constant="15" id="YTW-Uu-8JU"/>
+                                        <constraint firstItem="oCt-b7-7up" firstAttribute="leading" secondItem="OZz-K6-HNE" secondAttribute="leading" id="eUb-hx-hYT"/>
+                                        <constraint firstItem="OZz-K6-HNE" firstAttribute="top" secondItem="Gg1-6P-Pq2" secondAttribute="topMargin" id="yav-h6-R9B"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                                <connections>
+                                    <outlet property="nameLabel" destination="OZz-K6-HNE" id="tkq-q9-GKt"/>
+                                    <outlet property="serialNumberLabel" destination="oCt-b7-7up" id="WKV-UD-ZSA"/>
+                                    <outlet property="valueLabel" destination="6FI-WB-ght" id="3TI-OK-Xll"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -82,6 +101,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

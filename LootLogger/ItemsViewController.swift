@@ -48,15 +48,21 @@ class ItemsViewController: UITableViewController {
         // Create an instance of UITableViewCell with default appearance
         //let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
         // Get a new or recycled cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell",
-                                                 for: indexPath)
+        /*let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell",
+                                                 for: indexPath)*/
+        
+        //Dequeuing ItemCell instances
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell",
+                                                     for: indexPath) as! ItemCell
         // Set the text on the cell with the description of the item
         // that is at the nth index of items, where n = row this cell
         // will appear in on the table view
         let item = itemStore.allItems[indexPath.row]
         
-        cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+        // Configure the cell with the Item
+            cell.nameLabel.text = item.name
+            cell.serialNumberLabel.text = item.serialNumber
+            cell.valueLabel.text = "$\(item.valueInDollars)"
         return cell
     }
     //“Implementing table view row deletion”
@@ -79,6 +85,14 @@ class ItemsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath,to destinationIndexPath: IndexPath)
     {
         itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        //tableView.rowHeight = 65
+        tableView.rowHeight = UITableView.automaticDimension
+            tableView.estimatedRowHeight = 65
     }
 }
 
