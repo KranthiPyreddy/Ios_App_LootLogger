@@ -88,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WFi-Y0-6No">
-                                <rect key="frame" x="8" y="96" width="398" height="758"/>
+                                <rect key="frame" x="8" y="96" width="398" height="709"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="P2J-vf-uYR">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
@@ -148,7 +148,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcF-3L-sfC">
-                                        <rect key="frame" x="0.0" y="126" width="398" height="632"/>
+                                        <rect key="frame" x="0.0" y="126" width="398" height="583"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -159,14 +159,27 @@
                                     <constraint firstItem="sIu-Fk-WZf" firstAttribute="leading" secondItem="UAb-UM-2aq" secondAttribute="leading" id="lQM-iB-tTl"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQc-Na-rOU">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="jZy-oR-Qf9">
+                                        <connections>
+                                            <action selector="choosePhotoSource:" destination="COp-64-hww" id="880-bV-kcb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H25-Qm-ufX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="H25-Qm-ufX" firstAttribute="trailing" secondItem="WFi-Y0-6No" secondAttribute="trailing" constant="8" id="1EY-4G-ZgM"/>
+                            <constraint firstAttribute="trailing" secondItem="oQc-Na-rOU" secondAttribute="trailing" id="1fi-MO-DIZ"/>
+                            <constraint firstItem="oQc-Na-rOU" firstAttribute="leading" secondItem="Ksp-mR-6Qo" secondAttribute="leading" id="FY7-Wy-DLy"/>
+                            <constraint firstItem="H25-Qm-ufX" firstAttribute="bottom" secondItem="oQc-Na-rOU" secondAttribute="bottom" id="I4t-61-vhW"/>
                             <constraint firstItem="WFi-Y0-6No" firstAttribute="leading" secondItem="H25-Qm-ufX" secondAttribute="leading" constant="8" id="JXs-Hh-lPa"/>
-                            <constraint firstItem="H25-Qm-ufX" firstAttribute="bottom" secondItem="WFi-Y0-6No" secondAttribute="bottom" constant="8" id="fT7-Yk-qyh"/>
+                            <constraint firstItem="oQc-Na-rOU" firstAttribute="top" secondItem="WFi-Y0-6No" secondAttribute="bottom" constant="8" id="gVb-c6-79d"/>
                             <constraint firstItem="WFi-Y0-6No" firstAttribute="top" secondItem="H25-Qm-ufX" secondAttribute="top" constant="8" id="ict-0p-eKY"/>
                         </constraints>
                         <connections>

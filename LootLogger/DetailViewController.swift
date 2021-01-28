@@ -59,4 +59,28 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    //Creating an alert controller
+    @IBAction func choosePhotoSource(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        //Setting the modal presentation style
+        alertController.modalPresentationStyle = .popover
+        //Indicating where the popover should point
+        alertController.popoverPresentationController?.barButtonItem = sender
+        //Adding actions to the action sheet
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
+                print("Present camera")
+            }
+            alertController.addAction(cameraAction)
+
+            let photoLibraryAction
+                    = UIAlertAction(title: "Photo Library", style: .default) { _ in
+                print("Present photo library")
+            }
+            alertController.addAction(photoLibraryAction)
+
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+        //Presenting the view controller modally
+            present(alertController, animated: true, completion: nil)
+    }
 }
