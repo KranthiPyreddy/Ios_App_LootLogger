@@ -5,6 +5,8 @@ class Item: Equatable, Codable{
     var valueInDollars : Int
     var serialNumber : String?
     let dateCreated : Date
+    //Adding a new property for a unique identifier
+    let itemKey: String
     
     //Adding a designated initializer
     init(name: String, serialNumber: String?, valueInDollars: Int) {
@@ -12,6 +14,8 @@ class Item: Equatable, Codable{
         self.valueInDollars = valueInDollars
         self.serialNumber = serialNumber
         self.dateCreated = Date()
+        //generate a UUID and set it as the itemKey.
+        self.itemKey = UUID().uuidString
     }
     
     //Adding a convenience initializer
